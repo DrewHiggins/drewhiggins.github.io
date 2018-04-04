@@ -1,0 +1,286 @@
+<style>
+#rig {
+  max-width:900px;
+  margin:0 auto; /*center aligned*/
+  padding:0;
+  font-size:0; /* Remember to change it back to normal font size if have captions */
+  list-style:none;
+}
+#rig li {
+  display: inline-block;
+  *display:inline;/*for IE6 - IE7*/
+  width:33%;
+  vertical-align:middle;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+/* The wrapper for each item */
+.rig-cell {
+  /*margin:12px;
+  box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+  display:block;
+  position: relative;
+  overflow:hidden;
+}
+
+/* If have the image layer */
+.rig-img {
+  display:block;
+  width: 100%;
+  height: auto;
+  border:none;
+  transform:scale(1);
+  transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+  transform:scale(1.05);
+}
+
+/* If have the overlay layer */
+.rig-overlay {
+  position: absolute;
+  display:block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #000 url(img/link.png) no-repeat center 20%;
+  background-size:50px 50px;
+  opacity:0;
+  filter:alpha(opacity=0);/*For IE6 - IE8*/
+  transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+  opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+  display:block;
+  padding:0 30px;
+  box-sizing:border-box;
+  position:absolute;
+  left:0;
+  width:100%;
+  text-align:center;
+  text-transform:capitalize;
+  font-size:18px;
+  font-weight:bold;
+  font-weight:normal!important;
+  top:40%;
+  color:white;
+  opacity:0;
+  filter:alpha(opacity=0);/*For older IE*/
+  transform:translateY(-20px);
+  transition:all .3s;
+}
+#rig li:hover .rig-text {
+  transform:translateY(0px);
+  opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+  #rig li {
+      width:33%;
+  }
+}
+
+@media (max-width: 700px) {
+  #rig li {
+      width:33.33%;
+  }
+}
+
+@media (max-width: 550px) {
+  #rig li {
+      width:50%;
+  }
+}
+</style>
+
+<ul id="rig">
+    <li>
+        <a class="rig-cell" href="http://www.amoonshapedpool.com/" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/amsp.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Radiohead</span><br/>
+              <em class="album-title">A Moon Shaped Pool</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://awakenmylove.com/" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/aml.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Childish Gambino</span><br/>
+              <em class="album-title">Awaken, My Love!</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/painting-with/id1058904300" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/pw.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Animal Collective</span><br/>
+              <em class="album-title">Painting With</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/we-got-it-from-here...-thank/id1173106678" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/wgifh.png" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">A Tribe Called Quest</span><br/>
+              <em class="album-title">We Got It from Here... Thank You 4 Your Service</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://music.kanyewest.com/" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/tlop.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Kanye West</span><br/>
+              <em class="album-title">The Life of Pablo</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://runthejewels.com/" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/rtj3.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Run the Jewels</span><br/>
+              <em class="album-title">Run the Jewels 3</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/westworld-season-1-music-from/id1182133569" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/ww.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Ramin Djawadi</span><br/>
+              <em class="album-title">Westworld: Season 1</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/bottomless-pit/id1109208657" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/bp.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Death Grips</span><br/>
+              <em class="album-title">Bottomless Pit</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://soundcloud.com/hamburgerhelper/sets/watch-the-stove" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/wts.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Hamburger Helper</span><br/>
+              <em class="album-title">WATCH THE STOVE</em>
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/im-wide-awake-its-morning/id41654198" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/iwaim.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Bright Eyes</span><br/>
+              <em class="album-title">I'm Wide Awake It's Morning</em>&nbsp;(2005)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/veckatimest/id314837656" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/veck.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Grizzly Bear</span><br/>
+              <em class="album-title">Veckatimest</em>&nbsp;(2009)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/fleet-foxes/id281086394" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/ff.jpeg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Fleet Foxes</span><br/>
+              <em class="album-title">Fleet Foxes</em>&nbsp;(2008)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/bloom/id509665145" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/bloom.png" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Beach House</span><br/>
+              <em class="album-title">Bloom</em>&nbsp;(2012)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/young-the-giant/id394992805" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/ytg.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Young the Giant</span><br/>
+              <em class="album-title">Young the Giant</em>&nbsp;(2010)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/good-kid-m.a.a.d-city-deluxe/id622710488" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/gkmc.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Kendrick Lamar</span><br/>
+              <em class="album-title">good kid, m.A.A.d city</em>&nbsp;(2013)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/contra-bonus-track-version/id340465551" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/contra.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Vampire Weekend</span><br/>
+              <em class="album-title">Contra</em>&nbsp;(2010)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/old/id705667288" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/old.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Danny Brown</span><br/>
+              <em class="album-title">Old</em>&nbsp;(2013)
+            </span>
+        </a>
+    </li>
+    <li>
+        <a class="rig-cell" href="https://itunes.apple.com/us/album/sound-color/id963011510" target="_blank">
+            <img class="rig-img" src="/assets/img/2016-albums/sac.jpg" />
+            <span class="rig-overlay"></span>
+            <span class="rig-text">
+              <span class="album-artist">Alabama Shakes</span><br/>
+              <em class="album-title">Sound &amp; Color</em>&nbsp;(2015)
+            </span>
+        </a>
+    </li>
+</ul>
