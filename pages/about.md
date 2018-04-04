@@ -2,7 +2,7 @@
 layout: page
 title: About
 permalink: /about/
-feature-img: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/about.jpeg"
 ---
 
 <img src="/assets/img/me_n_mike.png"
