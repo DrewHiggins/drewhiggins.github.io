@@ -21,7 +21,9 @@ I've also worked as a developer for a few different companies. I built a decent
 amount of an MVP for an ed-tech startup in State College called
 [Live It](https://www.liveitu.com). I also worked at
 [StudioLabs](http://studiolabs.com) in NYC, a digital agency where I did client
-work for companies like Shake Shack, Estee Lauder, Paula Deen, and Zype. This
-past summer, I worked on the Discovery & Collaboration team at 
+work for companies like Shake Shack, Estee Lauder, Paula Deen, and Zype. In the
+summer of 2017, I worked on the Discovery & Collaboration team at 
 [Microsoft](https://www.microsoft.com) as a Software Engineering Intern in 
-Redmond, WA.
+Redmond, WA, where I returned to work full time for a year before moving to the
+[Xbox Game Pass for PC](https://www.xbox.com/en-US/xbox-game-pass/pc-games)
+team.
