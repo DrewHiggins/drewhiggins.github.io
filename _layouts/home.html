@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="home wrapper">
+  {%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  <img class="avatar" src="/assets/me.jpg">
+
+  <div class="home-page-links">
+    <a class="post-link" href="/about">about</a>
+    <span class="separator">|</span>
+    <a class="post-link" href="/blog">blog</a>
+    <span class="separator">|</span>
+    <a class="post-link" href="/projects">projects</a>
+  </div>
+
+  {{ content }}
+
+  {%- if site.posts.size > 0 -%}
+  <h2 class="post-list-heading">Latest Posts</h2>
+  <ul class="post-list">
+    {%- for post in site.posts limit:4 -%}
+    <li>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        {{ post.title | escape }}
+      </a>
+      <span class="post-meta">&mdash;{{ post.date | date: date_format }}</span>
+
+    </li>
+    {%- endfor -%}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {%- endif -%}
+
+</div>
