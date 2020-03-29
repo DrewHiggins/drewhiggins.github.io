@@ -2,6 +2,7 @@
 layout: post
 title: AutoTame for Bukkit
 date: 2014-08-01 20:00:00.000000000 -04:00
+tags: programming projects
 ---
 
 

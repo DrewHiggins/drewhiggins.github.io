@@ -2,6 +2,7 @@
 layout: post
 title: "The Derek Zoolander School for College Kids Who Can't Database Good"
 date: 2018-03-19 23:22:32 -04:00
+tags: programming
 ---
 
 One of the most useful classes I took during my time here at Penn State was

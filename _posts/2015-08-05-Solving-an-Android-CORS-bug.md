@@ -2,6 +2,7 @@
 layout: post
 title: Solving an Android CORS Bug
 date: 2015-08-05 23:23:54.000000000 -04:00
+tags: programming
 ---
 In the course of developing a hybrid app with the [Ionic Framework](http://ionicframework.com), I ran into a strange bug: the app would display data grabbed from a JSON API backend perfectly on my desktop web browser, through the `ionic serve --lab` command, and on the iOS Simulator. But for some strange reason, the space on the Android app where the data was supposed to go was blank on the Android emulator.
 
