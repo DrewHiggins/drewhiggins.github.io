@@ -28,7 +28,7 @@ body {
   flex-direction: column;
 
   p {
-    line-height: 1.75em;
+    line-height: $base-line-height;
   }
 }
 

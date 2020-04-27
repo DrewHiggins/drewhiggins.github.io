@@ -169,6 +169,7 @@ footer {
 
 .post-meta {
   color: $grey-color;
+  text-align: center;
 }
 
 /**
@@ -182,6 +183,8 @@ footer {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  margin-bottom: 0.25em;
+  text-align: center;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -248,8 +251,26 @@ footer {
 /**
  * Blog
  */
+.blog-entries {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
 .blog-entry {
-  margin: 2em 0;
+  margin: 0.25em 0;
+  display: flex;
+
+  .entry-date {
+    display: flex;
+    justify-content: flex-end;
+    width: 150px;
+  }
+  .entry-title {
+    display: flex;
+    flex: 1;
+  }
 
   .title {
     @include relative-font-size(2.25);

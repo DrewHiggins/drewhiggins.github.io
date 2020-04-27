@@ -1,25 +1,25 @@
 ---
 layout: default
 ---
-{%- include header.html -%}
+
 <main class="page-content" aria-label="Content">
     <div class="wrapper">
-        <h1 class="post-title p-name" itemprop="name headline">Blog</h1>
-        {%- if site.posts.size > 0 -%}
-        {%- for post in site.posts -%}
-        <div class="blog-entry">
-            <h2 class="title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-            <p class="post-meta">
-                <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        <h1 class="blog-title post-title p-name" itemprop="name headline">Blog</h1>
+        <div class="blog-entries">
+            {%- for post in site.posts -%}
+            <div class="blog-entry">
+                <div class="entry-date">
                     {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                    {{ post.date | date: date_format }}
-                </time>
-            </p>
-            <p>{{ post.excerpt }}</p>
-            <a href="{{ post.url }}">Read more</a>
+                    <span class="post-meta">{{ post.date | date: date_format }}&nbsp;</span>
+                </div>
+                <div class="entry-title">
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </div>
+            </div>
+            {%- endfor -%}
         </div>
-        {%- endfor -%}
-        {%- endif -%}
     </div>
 </main>
 {%- include footer.html -%}
