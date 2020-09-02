@@ -1,0 +1,79 @@
+@import "variables";
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/solid.scss";
+@import "./fontawesome/brands.scss";
+
+.sidebar {
+    flex: 1;
+    padding-right: 40px;
+    text-align: right;
+
+    .avatar-container {
+        padding-left: 50px;
+
+        img.avatar-img {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+        }
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+}
+
+h1 {
+    &.site-title {
+        font-size: 24px;
+    }
+}
+
+.social-buttons {
+    font-size: 24px;
+    margin-top: 0.75em;
+
+    a {
+        color: #ccc;
+        margin-left: 10px;
+
+        &:hover {
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    .twitter {
+        @extend %fa-icon;
+        @extend .fab;
+
+        &:before {
+            content: fa-content($fa-var-twitter);
+        }
+    }
+    .github {
+        @extend %fa-icon;
+        @extend .fab;
+
+        &:before {
+            content: fa-content($fa-var-github);
+        }
+    }
+}
+
+.sidebar-links {
+    h2 {
+        margin-top: 1.5em;
+    }
+
+    a {
+        font-family: $sidebar-link-font-family;
+        font-size: 15px;
+    }
+}
+
+.site-description {
+    color: #929292;
+    font-size: 13px;
+    font-style: italic;
+}

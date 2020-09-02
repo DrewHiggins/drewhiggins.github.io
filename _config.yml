@@ -1,0 +1,20 @@
+title: "Drew's Blog"
+description: "High tech, high pizza"
+avatar_url: '/assets/me.jpg'
+
+# The relative URL that your blog lives on
+home_url: '/'
+
+# Social media accounts to show underneath the site description
+# If you don't an account to show, set it's value to an empty string
+social:
+  twitter: ''
+  github: 'DrewHiggins'
+
+sidebar_links:
+
+# If enabled, it will show the content of includes/announcement.md above the posts on your homepage
+enable_announcement: false 
+
+# If enabled, it will truncate posts on the homepage and render a "Continue reading" link below the excerpt
+truncate_posts: true

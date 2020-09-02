@@ -1,0 +1,5 @@
+# Welcome!
+
+This is an example of an announcement! If you enable this in the config YAML file, it will display the content of `includes/announcement.html`!
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur nunc ut sollicitudin malesuada. Aenean pellentesque, sapien et bibendum volutpat, mi diam condimentum enim, a sodales magna augue in eros. Nunc dictum lacus et erat ultricies, vitae pulvinar odio laoreet. Curabitur neque lorem, feugiat eu finibus vel, condimentum nec tortor. Proin tempus cursus turpis, sed elementum felis pellentesque non. Ut tincidunt luctus purus id viverra. Morbi rutrum, ligula id pretium posuere, dui nisl commodo enim, a euismod eros quam sit amet lacus. Aliquam quis neque vitae velit feugiat convallis. Integer odio quam, ultricies vel justo eu, semper pharetra nulla. Morbi id maximus quam, sit amet suscipit velit. Nullam vehicula ac ipsum in bibendum. Cras tempor vel ante at ullamcorper. Donec eu risus cursus, sodales quam et, bibendum ligula. Cras ut leo eros. In quis sem faucibus, mollis neque in, placerat dolor. Nam id fermentum metus.

@@ -1,0 +1,47 @@
+<div class="sidebar">
+    {%- if site.avatar_url.size > 0 -%}
+        <div class="avatar-container">
+            <a class="linked-image" href="{{ site.home_url }}">
+                <img class="avatar-img" src="{{ site.avatar_url }}" />
+            </a>
+        </div>
+    {%- endif -%}
+    <h1 class="site-title">
+        <a href="{{ site.home_url}}">{{ site.title }}</a>
+    </h1>
+    <div class="site-description">{{ site.description }}</div>
+    <div class="social-buttons">
+        {%- if site.social.twitter.size > 0 -%}
+            <a class="twitter" target="_blank" href="https://www.twitter.com/{{ site.social.twitter }}"></a>
+        {%- endif -%}
+        {%- if site.social.github.size > 0 -%}
+            <a class="github" target="_blank" href="https://www.github.com/{{ site.social.github }}"></a>
+        {%- endif -%}
+    </div>
+
+    <div class="sidebar-links">
+        {%- if site.pages.size > 0 -%}
+            <h2>Pages</h2>
+        {%- endif -%}
+        {%- for page in site.pages -%}
+            {%- if page.show_in_sidebar == true -%}
+                <a class="sidebar-link" href="{{ page.url | relative_url }}">{{ page.title }}</a>
+                <br />
+            {%- endif -%}
+        {%- endfor -%}
+    </div>
+
+    <div class="sidebar-links">
+        {%- if site.sidebar_links.size > 0 -%}
+            <h2>Links</h2>
+        {%- endif -%}
+        {%- for link in site.sidebar_links -%}
+            {%- if link.new_tab -%}
+                <a class="sidebar-link" href="{{ link.url | relative_url }}" target="_blank">{{ link.title }}</a>
+            {%- else -%}
+                <a class="sidebar-link" href="{{ link.url | relative_url }}">{{ link.title }}</a>
+            {%- endif -%}
+            <br />
+        {%- endfor -%}
+    </div>
+</div>
