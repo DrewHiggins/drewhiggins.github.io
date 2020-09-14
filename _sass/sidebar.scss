@@ -5,6 +5,7 @@
 
 .sidebar {
     flex: 1;
+    max-width: 180px;
     padding-right: 40px;
     text-align: right;
 
@@ -76,4 +77,12 @@ h1 {
     color: #929292;
     font-size: 13px;
     font-style: italic;
+}
+
+@media only screen and (max-width: 650px) {
+    .sidebar {
+        max-width: 100%;
+        padding: 1em;
+        text-align: center;
+    }
 }
