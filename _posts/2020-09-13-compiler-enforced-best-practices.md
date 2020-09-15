@@ -56,6 +56,6 @@ What gives?
 
 I wrestled with this for a few hours. The error didn't make any sense: how could it *not* be a delegate type? How could it only be a delegate type once I removed the extra parameter?
 
-The answer ended up being that the `.Returns()` function has several overloads, and one of the is a `Func<Type1, Type2, ..., TResult>` object. Looking at [the .NET API documentation](https://docs.microsoft.com/en-us/dotnet/api/system.func-17?view=netcore-3.1), there are only definitions for `Func` with up to 16 generics associated to parameters. Since I was adding a 17th parameter, there was a type mismatch.
+The answer ended up being that the `.Returns()` function has several overloads, and some of them are the `Func<Type1, Type2, ..., TResult>` set of objects. Looking at [the .NET API documentation](https://docs.microsoft.com/en-us/dotnet/api/system.func-17?view=netcore-3.1), there are only definitions for `Func` with up to 16 generics associated to parameters. Since I was adding a 17th parameter, there was a type mismatch.
 
 So, I ended up having to do the refactoring I was trying to avoid. Long story short, don't put off code cleanup, or else the compiler will punish you.
