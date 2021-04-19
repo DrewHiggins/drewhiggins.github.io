@@ -4,9 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
   {% if page.layout == 'post' or page.layout == 'page' %}
-    <title>{{ page.title }} - Drew Higgins</title>
+  <title>{{ page.title }} - Drew Higgins</title>
   {% else %}
-    <title>Drew Higgins</title>
+  <title>Drew Higgins</title>
   {% endif %}
 </head>
