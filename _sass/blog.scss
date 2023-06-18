@@ -1,0 +1,18 @@
+article.blog-post {
+    h1 {
+        font-size: 40px;
+        margin-bottom: 0;
+    }
+
+    .feature-image-preview {
+        border-radius: 10px;
+        flex: 1;
+        height: 50px;
+    }
+}
+
+.post-break {
+    border-color: #ededed;
+    border-style: dashed;
+    margin-top: 2em;
+}

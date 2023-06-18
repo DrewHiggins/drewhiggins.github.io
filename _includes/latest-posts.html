@@ -1,0 +1,8 @@
+<ul>
+    {%- for post in site.posts limit:3 -%}
+        <li class="blog-link">
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="blog-date">({{ post.date |  date: "%B %e %Y" }})</span>
+        </li>
+    {%- endfor -%}
+</ul>
