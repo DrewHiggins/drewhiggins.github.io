@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Avoiding Blackouts with OpenWRT"
-date: 2023-05-03 20:38:00 -07:00
+date: 2023-07-05 19:50:00 -07:00
 categories: 'tech'
 ---
 
@@ -18,13 +18,13 @@ When I went to install OpenVPN's package, however, I quickly realized how limite
 Thankfully, this is a common enough issue that OpenWRT allows you to customize your firmware images with whatever set of packages you require pre-installed. I loaded up WSL and pulled down the tool, following the [instructions here](https://openwrt.org/docs/guide-developer/toolchain/wsl) to get the environment set up. I was then able to build a custom image with OpenVPN using the following command (Note that you have to include LuCI in the set up packages to install in addition to the base packages; they don't include that interface by default):
 
 ```
-make image PROFILE="TODO: Drew put the command here" PACKAGES="openvpn"
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin make image PROFILE="netgear_r6020" PACKAGES="openvpn-openssl luci-app-openvpn luci luci-ssl"
 ```
 
 Then, I simply used the sysupgrade firmware flashing UI to install this custom image. After that, I had OpenVPN running: success!
 
 All that was left was to configure the VPN. I use Private Internet Access (not an ad), and they provide their .ovpn config files [here](https://helpdesk.privateinternetaccess.com/kb/articles/where-can-i-find-your-ovpn-files). I uploaded a few of them using the LuCI GUI, used the built in authentication config text box to add my username and password, and fired up one of the server connections.
 
-That killed my internet connection, whoops.
+That killed my internet connection&mdash;whoops.
 
 Turns out you also need to configure an interface for OpenVPN, and then add it to your WAN firewall zone. You can do that by going to Network > Interfaces > Add new interface, and then setting the Device to `tun0`. After that, go to the "Firewall settings" tab, and set the "Create / assign firewall zone" dropdown to `wan`. Once that was done, the VPN connection worked, and I was able to kick back, relax, and watch the boys of summer.
